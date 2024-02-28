@@ -4,7 +4,7 @@ import { weather_data } from './data.js';
 let loadDayForecastData = () => {
 
     let [guayaquil, ambato, tema] = weather_data;
-    let { city, date, maxtemperature, mintemperature, ...other } = guayaquil
+    let { city, date, maxtemperature, mintemperature, cloudiness, wind, rainfall, forecast_today, ...other } = guayaquil
 
     let cityHTML = document.getElementById("city")
     cityHTML.innerHTML = city;
@@ -17,6 +17,15 @@ let loadDayForecastData = () => {
 
     let mintemperatureHTML = document.getElementById("mintemperature")
     mintemperatureHTML.innerHTML = mintemperature;
+
+    let cloudinessHTML = document.getElementById("cloudiness")
+    cloudinessHTML.innerHTML = cloudiness;
+
+    let windHTML = document.getElementById("wind")
+    windHTML.innerHTML = wind;
+
+    let rainfallHTML = document.getElementById("rainfall")
+    rainfallHTML.innerHTML = rainfall;
 }
 
 let loadWeekForecastData = () => {
